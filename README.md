@@ -1,28 +1,43 @@
-# js-eval README
-This extension is intended to make short evaluations from the highlighted/selected text in your Javascript File.
-After an expression you want to calculate has been selected, the result will update live on the statusbar(left bottom corner).
+# JS EVAL
+### This extension can make short evaluations from highlighted/selected text in Javascript.
+TO START:
+PC:  
+CTRL SHIFT P > Search for JS EVAL  
+MAC  
+CMD SHIFT P > Search for JS EVAL  
 
-JS EVAL is able to use both numbers and variables, even though the variables are defined outside of the selected text.
-It currently does not support arrays, object and functions, as it is intended for small evaluations and finding the latest assigned value to a selected variable.
+Then just select the text you want to get evaluated.
+This extension also gets variables values declared outside of the selected text.
+
+
 
 If you want to support me so I can continue developing and extending features, you can buy me a redbull here:
 https://ko-fi.com/jseval
 
+
+
+
+## Examples
+
+Evaluate the selected text.
+![1](./images/EXAMPLE%201.png)
+Get variable values from outside the selected text.
+![2](./images/EXAMPLE%202.png)
+A variable can also get its value from other variables.
+![3](./images/EXAMPLE%203.png)
+It is able to evaluate if a variables value is assigned to an expression(Even if the expression itself contains variables).
+Selected text inline will also be evaluated correctly.
+![4](./images/EXAMPLE%204.png)
+
+
+After an expression you want to calculate has been selected, the result will update live on the statusbar(left bottom corner).
+
+## General Info
 If you encounter any bugs, have any feedback on features you'd like me to implement, don't hesitate to reach out.
 
 
-
-## Features
-
-Evaluate the selected text.
-\!\[Example 1\]\(images\EXAMPLE 1.png\)
-Get variable values from outside the selected text.
-\!\[Example 2\]\(images\EXAMPLE 2.png\)
-A variable can also get its value from other variables.
-\!\[Example 3\]\(images\EXAMPLE 3.png\)
-It is able to evaluate if a variables value is assigned to an expression(Even if the expression itself contains variables).
-Selected text inline will also be evaluated correctly.
-\!\[Example 4\]\(images\EXAMPLE 4.png\)
+JS EVAL is able to use both numbers and variables, even though the variables are defined outside of the selected text.
+It currently does not support arrays, object and functions, as it is intended for small evaluations and finding the latest assigned value to a selected variable.
 
 ## Extension Settings
 

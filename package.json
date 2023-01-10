@@ -1,8 +1,9 @@
 {
   "name": "js-eval",
   "displayName": "JS-EVAL",
-  "description": "",
-  "version": "0.0.1",
+  "publisher": "JSEVAL",
+  "description": "Simple Calculator for javascript, JS",
+  "version": "0.0.6",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -20,6 +21,10 @@
         "title": "JS Eval"
       }
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/audunlk/js-eval.git"
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
