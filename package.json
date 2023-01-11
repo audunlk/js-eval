@@ -2,6 +2,7 @@
   "name": "js-eval",
   "displayName": "JS-EVAL",
   "publisher": "JSEVAL",
+  "icon": "./images/JS%20EVAL%20128.png",
   "description": "A Calculator for javaScript, JS",
   "version": "0.2.0",
   "engines": {
