@@ -4,7 +4,7 @@
   "publisher": "JSEVAL",
   "icon": "images/JS EVAL 128.png",
   "description": "A Calculator for javaScript, JS",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "engines": {
     "vscode": "^1.58.0"
   },
