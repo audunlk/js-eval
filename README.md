@@ -1,7 +1,7 @@
 # JS EVAL
 ### This extension can make short evaluations from highlighted/selected text in Javascript.
-TO START:
-PC:  
+TO START:  
+PC  
 CTRL SHIFT P > Search for JS EVAL  
 MAC  
 CMD SHIFT P > Search for JS EVAL  
@@ -19,15 +19,15 @@ https://ko-fi.com/jseval
 
 ## Examples
 
-Evaluate the selected text.
-![1](./images/EXAMPLE%201.png)
-Get variable values from outside the selected text.
-![2](./images/EXAMPLE%202.png)
-A variable can also get its value from other variables.
-![3](./images/EXAMPLE%203.png)
-It is able to evaluate if a variables value is assigned to an expression(Even if the expression itself contains variables).
-Selected text inline will also be evaluated correctly.
-![4](./images/EXAMPLE%204.png)
+Evaluate the selected text.  
+![1](./images/EXAMPLE%201.png)  
+Get variable values from outside the selected text.  
+![2](./images/EXAMPLE%202.png)  
+A variable can also get its value from other variables.  
+![3](./images/EXAMPLE%203.png)  
+It is able to evaluate if a variables value is assigned to an expression(Even if the expression itself contains variables).  
+Selected text inline will also be evaluated correctly.  
+![4](./images/EXAMPLE%204.png)  
 
 
 After an expression you want to calculate has been selected, the result will update live on the statusbar(left bottom corner).
