@@ -4,7 +4,7 @@
   "publisher": "JSEVAL",
   "description": "A Calculator for javaScript, JS",
   "icon": "logo.png",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "keywords": ["calculator", "js", "javascript", "variables", "selected", "text", "highlighted", "eval", "number", "calc"],
   "license": "MIT",
   "engines": {
@@ -14,7 +14,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:js-eval.js-eval"
+    "onStartupFinished"
   ],
   "main": "./out/extension.js",
   "contributes": {
