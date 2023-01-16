@@ -4,8 +4,9 @@
   "publisher": "JSEVAL",
   "description": "A Calculator for javaScript, JS",
   "icon": "logo.png",
-  "version": "0.2.7",
-  "keywords": ["calculator", "js", "javascript", "variables", "selected", "text", "highlighted"],
+  "version": "0.2.8",
+  "keywords": ["calculator", "js", "javascript", "variables", "selected", "text", "highlighted", "eval", "number", "calc"],
+  "license": "MIT",
   "engines": {
     "vscode": "^1.58.0"
   },
