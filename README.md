@@ -12,14 +12,12 @@ https://ko-fi.com/jseval
 
 ## HOW IT WORKS:
 
-Evaluate the selected text.  
-![1](./images/EXAMPLE%201.gif)  
-Get variable values from outside the selected text.  
+Evaluate the selected text. A variable can also get its value from other variables. 
 ![2](./images/EXAMPLE%202.gif)  
-A variable can also get its value from other variables.  
-![3](./images/EXAMPLE%203.gif)  
 It is able to evaluate if a variables value is assigned to an expression(Even if the expression itself contains variables).  
-Selected text inline will also be evaluated correctly.    
+Selected text inline will also be evaluated correctly.
+![3](./images/EXAMPLE%203.gif)  
+    
 
 
 
