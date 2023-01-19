@@ -2,8 +2,10 @@
 import * as vscode from 'vscode';
 import * as vm from 'vm';
 
-export function activate(context: vscode.ExtensionContext) {
 
+
+export function activate(context: vscode.ExtensionContext) {
+  
 	let disposable = vscode.commands.registerCommand('js-eval.js-eval', () => {
 	
       let statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 300);
@@ -13,28 +15,28 @@ export function activate(context: vscode.ExtensionContext) {
         statusBarItem.hide();
         return;
       }
-      // Get the current document
+      //get the current document
       const document = editor.document;
 
       // Use the document to get the text of the file
-      //get text from start of document, to start of s
+      //get text from start of document, to start of selection
       const text = document.getText(new vscode.Range(new vscode.Position(0, 0), editor.selection.start));
 
-      // Split the text into lines
+      //split the text into lines
       const lines = text.split('\n');
 
-      // Get the selected text
+      //get the selected text
       const selection = editor.selection;
 
-      // Get the selected text
+      //get the selected text
       let selectedText = document.getText(selection);
 
-      // Initialize an empty map to store the variables and their values
+      //initialize an empty map to store the variables and their values
       const variables = new Map<string, string>();
       //Alternative? const variables = new Map<string, {value: string, unique: boolean}>();
 
       
-      //Make an array with all the selected text variables.
+      //make an array with all the selected text variables.
       let selectedTextMatch = selectedText.match(/[a-zA-Z]+/g);
 
       if (selectedTextMatch) {
@@ -45,24 +47,24 @@ export function activate(context: vscode.ExtensionContext) {
           console.log(`selectedTextMatch in the loop: ${selectedTextMatch[j]}`);
           for (let i = 0; i < lineLength; i++) {
             console.log(selectedTextMatch);
-            // Use a regular expression to match the variable declarations
+            //use a regular expression to match the variable declarations
             const line = lines[i];
             const match = line.match(/^\s*(let|const|var)\s+(\w+)\s*=\s*([^;]+)/);
             const reDeclareMatch = line.match(/^\s*(\w+)\s*=\s*([^;]+)/);
 
             if (match) {
-              // Extract the variable name and value
+              //extract the variable name and value
               const [, , name, value] = match;
-               // Replace the variable names in the value with their corresponding values
+               //replace the variable names in the value with their corresponding values
               let modifiedValue = value;
               variables.forEach((val, varName) => {
                 modifiedValue = modifiedValue.replace(new RegExp(varName, "g"), val);
               });
-            // Add the variable to the map, replacing any existing value
+            //Add the variable to the map, replacing any existing value
               variables.set(name, modifiedValue);
             }else if(reDeclareMatch){
               const [, name, value] = reDeclareMatch;
-              // Replace the variable names in the value with their corresponding values
+              //replace the variable names in the value with their corresponding values
               let modifiedValue = value;
               variables.forEach((val, varName) => {
                 modifiedValue = modifiedValue.replace(new RegExp(varName, "g"), val);
@@ -77,7 +79,7 @@ export function activate(context: vscode.ExtensionContext) {
       //Log all the variables in the map
       console.log(`Found variables: ${JSON.stringify([...variables])}`);
 
-      // Replace the variables in the selected text with their values
+      //replace the variables in the selected text with their values
       let modifiedText = selectedText;
       for (const [name, value] of variables) {
         let modifiedTextMatch = modifiedText.match(/\b[a-zA-Z]+\b/g);
@@ -92,7 +94,7 @@ export function activate(context: vscode.ExtensionContext) {
       }
       console.log(`Modified text: ${modifiedText}`);
 
-      // Evaluate the modified text
+      //evaluate the modified text
       let result;
       try {
         let modifiedTextFilter = modifiedText.match(/[\[\]\{\}]/g);
@@ -120,18 +122,18 @@ export function activate(context: vscode.ExtensionContext) {
       }
     }
 
-    // Get the active text editor
+    // gget the active text editor
     const editor = vscode.window.activeTextEditor;
     if (editor) {
       updateStatusBar();
+      
     }
 
-    // Subscribe to the 'onDidChangeTextEditorSelection' event to update the status bar when the selection changes
+    //subscribe to the oncChange event to update the status bar when the selection changes
     let selectionChangeDisposable = vscode.window.onDidChangeTextEditorSelection((event) => {
       updateStatusBar();
     });
 
-    // Dispose the event subscriptions when the command is deactivated
     context.subscriptions.push(selectionChangeDisposable);
   });
 

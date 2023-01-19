@@ -2,9 +2,9 @@
   "name": "js-eval",
   "displayName": "JS-EVAL",
   "publisher": "JSEVAL",
-  "description": "A Calculator for javaScript, JS",
+  "description": "Calculate selected text in JavaScript",
   "icon": "logo.png",
-  "version": "0.3.0",
+  "version": "0.3.3",
   "keywords": ["calculator", "js", "javascript", "variables", "selected", "text", "highlighted", "eval", "number", "calc"],
   "license": "MIT",
   "engines": {
@@ -14,7 +14,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onStartupFinished"
+    "onCommand:js-eval.js-eval"
   ],
   "main": "./out/extension.js",
   "contributes": {
